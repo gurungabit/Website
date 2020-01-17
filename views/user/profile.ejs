@@ -1,0 +1,48 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <figure class="figure">
+                <img src="<%=user.avatar%>" class="figure-img img-fluid rounded" alt="user image">
+                <figcaption class="figure-caption text-right">
+                    <%= user.firstName + " " + user.lastName%>
+                </figcaption>
+                <!-- <figcaption class="figure-caption text-right">
+                    <%= user.email %>
+                </figcaption> -->
+            </figure>
+            <p>
+                <%=user.info%>
+            </p>
+            <% if( (!currentUser) || user.id != currentUser._id) { %>
+
+            <% } else { %>
+            <a class="btn btn-primary" style="margin-bottom: 10px;" type="button" href="/forgot">Change password <i class="fas fa-edit"></i></a>
+            <br>
+            <a class="btn btn-primary " type="button" href="/profile/<%=user.id%>/edit">Edit profile <i class="fas fa-edit"></i></a>
+            <% } %>
+        </div>
+        <div class="col-md-9">
+            <div class="col-lg-9">
+                <h1>All post by
+                    <figcaption class="figure-caption d-inline">
+                        <cite title="Source Title"><%= user.firstName + " " + user.lastName%></cite>
+                    </figcaption>
+                </h1>
+                <% camp.forEach(function(ground) { %>
+                <figure class="figure">
+                    <img src="<%= ground.image %>" class="figure-img img-fluid rounded" />
+                    <figcaption class="figure-caption text-right">
+                        <h4><%= ground.name %></h4>
+                        <p>
+                            <a class="btn btn-outline-light btn-sm" href="/campgrounds/<%= ground._id %>">More Info</a>
+                        </p>
+                    </figcaption>
+                </figure>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>
