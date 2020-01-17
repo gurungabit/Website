@@ -1,6 +1,6 @@
 # Website
 
-Yelp Clone
+[Yelp Clone Website link](http://gurungabit.herokuapp.com/)
 
 # Features
 
@@ -49,5 +49,3 @@ Yelp Clone
 - Font Awesome
 - Deployment
 - Heroku
-
-[Website link](http://gurungabit.herokuapp.com/)
