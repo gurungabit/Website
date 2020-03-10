@@ -1,6 +1,6 @@
 # Website
 
-[Yelp Clone Website link](http://gurungabit.herokuapp.com/)
+[City Sites Website link](http://gurungabit.herokuapp.com/)
 
 # Features
 
