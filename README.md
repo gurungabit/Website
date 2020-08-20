@@ -28,9 +28,9 @@
 # Front-end
 
 - connect-flash
-- mongoDB
 - Bootstrap 4
-- Back-end
+# Back-end
+- mongoDB
 - express
 - mongoose
 - method-override
